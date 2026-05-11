@@ -25,7 +25,7 @@ export default function Footer({ lang }: FooterProps) {
 
   const instagramHref = 'https://www.instagram.com/interandes_trading_sac?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';
 
-  const linkedinHref = '#';
+  const linkedinHref = 'https://www.linkedin.com/in/angela-huamani-mallque-b72880125/';
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -179,13 +179,19 @@ export default function Footer({ lang }: FooterProps) {
           </p>
 
           <div className="flex items-center gap-4 text-xs">
-            <span className="text-label text-grey/50 hover:text-grey cursor-default transition-colors">
+            <a
+              href="/privacy"
+              className="text-label text-grey/50 hover:text-grey transition-colors"
+            >
               {t.privacy}
-            </span>
+            </a>
 
-            <span className="text-label text-grey/50 hover:text-grey cursor-default transition-colors">
+            <a
+              href="/terms"
+              className="text-label text-grey/50 hover:text-grey transition-colors"
+            >
               {t.terms}
-            </span>
+            </a>
           </div>
         </div>
       </div>

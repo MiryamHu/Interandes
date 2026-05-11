@@ -15,11 +15,12 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
   const t = translations[lang].nav;
 
   const navLinks = [
-    { label: t.services, href: '#servicios' },
+    { label: t.solutions, href: '/#soluciones' },
+    { label: t.services, href: '/#servicios' },
+    { label: t.process, href: '/#proceso' },
+    { label: t.testimonials, href: '/#testimonios' },
     { label: t.about, href: '/about' },
-    { label: t.process, href: '#proceso' },
-    { label: t.testimonials, href: '#testimonios' },
-    { label: t.contact, href: '#contacto' },
+    { label: t.contact, href: '/#contacto' },
   ];
 
   const toggleLang = () => {
@@ -27,7 +28,7 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoaded(true), 1200);
+    const timer = setTimeout(() => setLoaded(true), 500);
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
@@ -40,18 +41,48 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     setMenuOpen(false);
 
-    if (href.startsWith('#')) {
-      e.preventDefault();
+    const headerOffset = 90;
 
-      const target = document.querySelector(href);
+    const scrollToTarget = (hash: string) => {
+      const target = document.querySelector(hash);
 
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
+        const targetPosition =
+          target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+
+        window.history.pushState(null, '', hash);
       }
+    };
+
+    if (href === '/about' || href === '/privacy' || href === '/terms') {
+      return;
+    }
+
+    if (href.startsWith('/#')) {
+      e.preventDefault();
+
+      const hash = href.replace('/', '');
+
+      if (window.location.pathname !== '/') {
+        window.location.assign(href);
+        return;
+      }
+
+      scrollToTarget(hash);
+      return;
+    }
+
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      scrollToTarget(href);
     }
   };
 
@@ -67,7 +98,7 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
         }`}
       >
         <div className="flex items-center justify-between px-[5vw] lg:px-[6vw] h-[96px]">
-          <a href="#" className="flex items-center overflow-visible">
+          <a href="/" className="flex items-center overflow-visible">
             <img
               src="/images/logo-interandes-2.png"
               alt="Interandes Trading"
@@ -100,8 +131,8 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
             </button>
 
             <a
-              href="#contacto"
-              onClick={(e) => handleNavClick(e, '#contacto')}
+              href="/#contacto"
+              onClick={(e) => handleNavClick(e, '/#contacto')}
               className="inline-block bg-amber text-midnight px-7 py-3 rounded-lg text-label font-semibold hover:bg-[#e0c16a] hover:scale-[1.02] transition-all duration-300"
             >
               {t.cta}
@@ -142,8 +173,8 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
           </button>
 
           <a
-            href="#contacto"
-            onClick={(e) => handleNavClick(e, '#contacto')}
+            href="/#contacto"
+            onClick={(e) => handleNavClick(e, '/#contacto')}
             className="mt-4 bg-amber text-midnight px-8 py-4 rounded-lg text-label font-semibold uppercase"
           >
             {t.cta}
