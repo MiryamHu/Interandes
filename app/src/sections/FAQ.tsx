@@ -19,6 +19,8 @@ type FAQProps = {
     const t = translations[lang].faq;
 
     useEffect(() => {
+        if (!sectionRef.current || !headerRef.current || !listRef.current) return;
+
         const ctx = gsap.context(() => {
         gsap.fromTo(
             headerRef.current!.querySelectorAll('.reveal-item'),
@@ -48,7 +50,7 @@ type FAQProps = {
             ease: 'power3.out',
             scrollTrigger: {
                 trigger: listRef.current,
-                start: 'top 85%',
+                start: 'top 90%',
                 once: true,
             },
             }
@@ -56,7 +58,7 @@ type FAQProps = {
         }, sectionRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [lang]);
 
     return (
         <section
@@ -88,16 +90,16 @@ type FAQProps = {
 
                 return (
                 <div
-                    key={item.question}
-                    className="faq-item opacity-0 bg-teal/40 border border-amber/15 rounded-2xl overflow-hidden"
+                    key={`${lang}-${index}`}
+                    className="faq-item bg-teal/40 border border-amber/15 rounded-2xl overflow-hidden"
                 >
                     <button
                     type="button"
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="w-full flex items-center justify-between gap-6 text-left px-6 py-5 lg:px-8 lg:py-6 hover:bg-amber/5 transition-colors"
                     >
-                    <span className="text-[15px] md:text-[17px] text-light-grey uppercase font-semibold leading-snug">
-                    {item.question}
+                    <span className="text-[15px] md:text-[17px] text-light-grey font-semibold leading-snug">
+                        {item.question}
                     </span>
 
                     <span className="flex-shrink-0 w-9 h-9 rounded-full border border-amber/40 flex items-center justify-center text-amber">

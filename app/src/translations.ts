@@ -691,44 +691,7 @@ export const translations = {
         location: 'Lima, Peru',
         },
 
-        faq: {
-        overline: 'Frequently Asked Questions',
-        title: 'Answers before you start',
-        subtitle:
-            'These are some of the most common questions before starting an import, export, or customs management operation.',
-        items: [
-            {
-            question: 'Do you work with companies importing for the first time?',
-            answer:
-                'Yes. We support companies starting their first import operations by explaining each stage of the process, required documents, estimated costs, and the risks to avoid.',
-            },
-            {
-            question: 'Can you help me find suppliers abroad?',
-            answer:
-                'Yes. We search for and validate international suppliers, reviewing business background, purchase conditions, documentation, samples, and logistics options before starting an operation.',
-            },
-            {
-            question: 'Do you also help export Peruvian products?',
-            answer:
-                'Yes. We help Peruvian producers and companies identify markets, prepare documentation, coordinate international logistics, and connect with potential B2B buyers.',
-            },
-            {
-            question: 'What documents do I need to import or export?',
-            answer:
-                'It depends on the product and the country of origin or destination. Common documents include commercial invoice, packing list, transport documents, certificates of origin, sanitary permits, or special authorizations depending on the goods.',
-            },
-            {
-            question: 'Do you handle customs procedures?',
-            answer:
-                'Yes. We coordinate customs management with authorized agents, review documentation, tariff classification, non-tariff requirements, and support the process until the goods are released or dispatched.',
-            },
-            {
-            question: 'Is the first consultation free?',
-            answer:
-                'Yes. The first consultation is free. In that meeting, we review your needs, the type of operation, and the recommended steps to move forward safely.',
-            },
-        ],
-        },
+
 
         privacyPage: {
         overline: 'Legal information',
@@ -835,6 +798,45 @@ export const translations = {
             'For questions about these terms, you may write to angelahuamani@interandes.com.pe.',
         },
 
+                faq: {
+        overline: 'Frequently Asked Questions',
+        title: 'Answers before you start',
+        subtitle:
+            'These are some of the most common questions before starting an import, export, or customs management operation.',
+        items: [
+            {
+            question: 'Do you work with companies importing for the first time?',
+            answer:
+                'Yes. We support companies starting their first import operations by explaining each stage of the process, required documents, estimated costs, and the risks to avoid.',
+            },
+            {
+            question: 'Can you help me find suppliers abroad?',
+            answer:
+                'Yes. We search for and validate international suppliers, reviewing business background, purchase conditions, documentation, samples, and logistics options before starting an operation.',
+            },
+            {
+            question: 'Do you also help export Peruvian products?',
+            answer:
+                'Yes. We help Peruvian producers and companies identify markets, prepare documentation, coordinate international logistics, and connect with potential B2B buyers.',
+            },
+            {
+            question: 'What documents do I need to import or export?',
+            answer:
+                'It depends on the product and the country of origin or destination. Common documents include commercial invoice, packing list, transport documents, certificates of origin, sanitary permits, or special authorizations depending on the goods.',
+            },
+            {
+            question: 'Do you handle customs procedures?',
+            answer:
+                'Yes. We coordinate customs management with authorized agents, review documentation, tariff classification, non-tariff requirements, and support the process until the goods are released or dispatched.',
+            },
+            {
+            question: 'Is the first consultation free?',
+            answer:
+                'Yes. The first consultation is free. In that meeting, we review your needs, the type of operation, and the recommended steps to move forward safely.',
+            },
+        ],
+        },
+        
         footer: {
         servicesTitle: 'Services',
         companyTitle: 'Company',
