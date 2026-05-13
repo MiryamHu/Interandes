@@ -4,7 +4,12 @@ import Footer from '../sections/Footer';
 import { translations, type Lang } from '../translations';
 
 export default function About() {
-    const [lang, setLang] = useState<Lang>('es');
+    const [lang, setLang] = useState<Lang>(() => {
+        const savedLang = localStorage.getItem('lang');
+
+        return savedLang === 'en' ? 'en' : 'es';
+    });
+
     const t = translations[lang].about;
 
     return (
@@ -25,18 +30,29 @@ export default function About() {
                 {t.title}
                 </h1>
 
-                <p className="text-body text-grey leading-relaxed mb-6">
-                {t.description}
+                <div className="space-y-5">
+                <p className="text-body text-grey leading-relaxed">
+                    {t.description}
                 </p>
 
                 <p className="text-body text-grey leading-relaxed">
-                {t.description2}
+                    {t.description2}
                 </p>
+
+                <p className="text-body text-grey leading-relaxed">
+                    {t.description3}
+                </p>
+
+                <p className="text-body text-grey leading-relaxed">
+                    {t.description4}
+                </p>
+                </div>
 
                 <div className="mt-8">
                 <p className="text-label text-amber font-semibold">
                     {t.name}
                 </p>
+
                 <p className="text-sm text-grey mt-1">
                     {t.role}
                 </p>

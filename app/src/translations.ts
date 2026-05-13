@@ -22,14 +22,17 @@ export const translations = {
         secondaryButton: 'Conocer Servicios',
         imageAlt: 'Fondo de logística internacional',
         },
-
         about: {
         overline: 'Nosotros',
         title: 'Experiencia y confianza en comercio exterior',
         description:
-            'Interandes Trading SAC nace con el objetivo de acompañar a empresas peruanas en sus operaciones de importación, exportación, gestión aduanera y logística internacional.',
+            'Interandes Trading SAC nace con el objetivo de acompañar a empresas nacionales e internacionales en sus operaciones de importación, exportación, gestión aduanera y logística internacional, brindando soluciones estratégicas y acompañamiento cercano en cada etapa del proceso.',
         description2:
-            'Liderada por una especialista en comercio exterior, la empresa ofrece asesoría cercana, clara y estratégica para ayudar a MYPEs y empresas consolidadas a conectar con nuevos mercados.',
+            'La empresa es liderada por Ángela Huamaní, profesional en Comercio Internacional con más de 8 años de experiencia gestionando operaciones internacionales, abastecimiento y coordinación logística para distintos sectores.',
+        description3:
+            'Su experiencia incluye la búsqueda y validación de proveedores confiables en Perú para empresas extranjeras, así como la coordinación de operaciones de importación, exportación y comercio internacional entre distintos mercados.',
+        description4:
+            'Gracias a su experiencia en logística internacional, negociación y gestión aduanera, Interandes ofrece una asesoría clara, práctica y orientada a generar confianza en cada operación.',
         name: 'Ángela Huamaní',
         role: 'Fundadora de Interandes Trading SAC',
         imageAlt: 'Fundadora de Interandes Trading SAC',
@@ -161,10 +164,10 @@ export const translations = {
             },
             ],
             stats: [
-            { value: '+15', label: 'Años en comercio internacional' },
-            { value: '0', label: 'Riesgos al iniciar con nosotros' },
-            { value: '5', label: 'Mercados activos en Sudamérica' },
-            ],
+                { value: '+8', label: 'Años en comercio internacional' },
+                { value: '100%', label: 'Acompañamiento personalizado' },
+                { value: '5', label: 'Mercados activos en Sudamérica' },
+                ],
         },
         bottom: {
             overline: 'Comercio exterior estratégico',
@@ -457,9 +460,13 @@ export const translations = {
         overline: 'About Us',
         title: 'Experience and trust in international trade',
         description:
-            'Interandes Trading SAC was created to support Peruvian companies in import, export, customs management, and international logistics operations.',
+            'Interandes Trading SAC was created to support national and international companies in their import, export, customs management, and international logistics operations, providing strategic solutions and close support at every stage of the process.',
         description2:
-            'Led by a foreign trade specialist, the company provides close, clear, and strategic consulting to help small businesses and established companies connect with new markets.',
+            'The company is led by Ángela Huamaní, an International Trade professional with more than 8 years of experience managing international operations, procurement, and logistics coordination across different sectors.',
+        description3:
+            'Her experience includes the search and validation of reliable suppliers in Peru for foreign companies, as well as the coordination of import, export, and international trade operations between different markets.',
+        description4:
+            'Thanks to her experience in international logistics, negotiation, and customs management, Interandes provides clear, practical consulting focused on building trust in every operation.',
         name: 'Ángela Huamaní',
         role: 'Founder of Interandes Trading SAC',
         imageAlt: 'Founder of Interandes Trading SAC',
@@ -591,8 +598,8 @@ export const translations = {
             },
             ],
             stats: [
-            { value: '+15', label: 'Years in international trade' },
-            { value: '0', label: 'Risks when starting with us' },
+            { value: '+8', label: 'Years in international trade' },
+            { value: '100%', label: 'Personalized support' },
             { value: '5', label: 'Active markets in South America' },
             ],
         },
