@@ -4,7 +4,12 @@ import Footer from '../sections/Footer';
 import { translations, type Lang } from '../translations';
 
 export default function Privacy() {
-    const [lang, setLang] = useState<Lang>('es');
+    const [lang, setLang] = useState<Lang>(() => {
+        const savedLang = localStorage.getItem('lang');
+
+        return savedLang === 'en' ? 'en' : 'es';
+        });
+
     const t = translations[lang].privacyPage;
 
     return (

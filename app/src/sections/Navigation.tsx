@@ -24,7 +24,10 @@ export default function Navigation({ lang, setLang }: NavigationProps) {
   ];
 
   const toggleLang = () => {
-    setLang(lang === 'es' ? 'en' : 'es');
+    const nextLang = lang === 'es' ? 'en' : 'es';
+
+    setLang(nextLang);
+    localStorage.setItem('lang', nextLang);
   };
 
   useEffect(() => {

@@ -15,7 +15,11 @@ import type { Lang } from '../translations';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>('es');
+  const [lang, setLang] = useState<Lang>(() => {
+    const savedLang = localStorage.getItem('lang');
+
+    return savedLang === 'en' ? 'en' : 'es';
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
